@@ -7,3 +7,10 @@ Homepage should firs have some kind of registration form
 Later it should have one button registration with some payment
 
  
+
+## Docker
+
+### compose 
+```
+docker-compose -f docker-compose.yml -p msf up -d
+```
