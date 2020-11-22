@@ -24,26 +24,12 @@
       </q-toolbar>
     </q-header>
 
-    <!-- <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
+    <q-drawer v-model="leftDrawerOpen" bordered content-class="bg-grey-1">
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item-label header class="text-grey-8">Menu</q-item-label>
+        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
       </q-list>
-    </q-drawer>-->
+    </q-drawer>
 
     <q-page-container>
       <router-view />
@@ -56,16 +42,16 @@
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Sign up',
+    caption: 'registration0',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'registration1'
   },
   {
-    title: 'Registration',
-    caption: 'Community Quasar projects',
+    title: 'Sign in',
+    caption: 'log in0',
     icon: 'favorite',
-    link: '#registration'
+    link: 'log in1'
   }
 ]
 
