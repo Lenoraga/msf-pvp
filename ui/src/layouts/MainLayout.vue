@@ -2,22 +2,13 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="home"
-          aria-label="home"
-          to="/"
-        />
+        <q-btn flat dense round icon="home" aria-label="home" to="/" />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-toolbar-title>Msf-pvp.com</q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
 
-        <q-btn color="primary" label="Registration"  to="registration"/>
+        <q-btn color="primary" label="Registration" to="registration" />
       </q-toolbar>
     </q-header>
 
@@ -40,7 +31,7 @@
           v-bind="link"
         />
       </q-list>
-    </q-drawer> -->
+    </q-drawer>-->
 
     <q-page-container>
       <router-view />
