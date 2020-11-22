@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ui:
+    image: msf-ui
+    ports:
+      - "80:80"
+    networks:
+      - msf
+
+networks:
+  msf:
