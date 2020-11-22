@@ -27,7 +27,6 @@
     "eslint-plugin-vue": "^6.1.2"
   },
   "browserslist": [
-    "ie >= 11",
     "last 10 Chrome versions",
     "last 10 Firefox versions",
     "last 4 Edge versions",
