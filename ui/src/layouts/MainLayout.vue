@@ -38,8 +38,7 @@
 </template>
 
 <script>
-// import EssentialLink from 'components/EssentialLink.vue'
-
+import EssentialLink from 'components/EssentialLink.vue'
 const linksData = [
   {
     title: 'Sign up',
@@ -54,10 +53,11 @@ const linksData = [
     link: 'log in1'
   }
 ]
-
 export default {
   name: 'MainLayout',
-  // components: { EssentialLink },
+  components: {
+    EssentialLink
+  },
   data () {
     return {
       leftDrawerOpen: false,
