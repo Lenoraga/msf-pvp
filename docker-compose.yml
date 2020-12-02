@@ -7,6 +7,12 @@ services:
       - "80:80"
     networks:
       - msf
+  api:
+    image: msf-api
+    ports:
+      - "8013:8013"
+    networks:
+      - msf
 
 networks:
   msf:
