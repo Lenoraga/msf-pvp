@@ -1,9 +1,9 @@
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="my-card">
+    <q-card class="my-card" v-for="tournament in data.tournaments" :key="'tournament' + tournament.id">
       <q-card-section class="bg-primary text-white">
-        <div class="text-h6">First pvp tournament</div>
-        <div class="text-subtitle2">by Petruha</div>
+        <div class="text-h6">{{tournament.name}}</div>
+        <div class="text-subtitle2">{{tournament.description}}</div>
       </q-card-section>
 
       <q-separator />
@@ -13,23 +13,29 @@
         <q-btn flat>Follow</q-btn>
       </q-card-actions>
     </q-card>
-
-    <q-card class="my-card">
-      <q-card-section class="bg-purple text-white">
-        <div class="text-h6">Second pvp tournament</div>
-        <div class="text-subtitle2">by Sookast</div>
-      </q-card-section>
-
-      <q-card-actions align="around">
-        <q-btn flat>Register now</q-btn>
-        <q-btn flat>Follow</q-btn>
-      </q-card-actions>
-    </q-card>
   </div>
 </template>
 
 <script>
+const axios = require('axios')
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  data () {
+    return {
+      data: {}
+    }
+  },
+  beforeMount () {
+    this.getTournaments()
+  },
+  methods: {
+    getTournaments () {
+      axios
+        .get('/api/tournaments')
+        .then(response => (
+          this.data = response.data
+        ))
+    }
+  }
 }
 </script>
